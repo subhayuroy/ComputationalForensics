@@ -1,0 +1,6 @@
+Android supports password lock with PIN number or alphanumeric password. The limit of both passphrases are required to be between 4 and 16 digits or characters. The password of a smartphone is stored in the Android system in a special file called password.key in /data/system.
+Android stores a salted SHA1-hashsum and MD5-hashsum of the password.
+
+It is not feasible to crack the password with the help of dictionary attack as the hashed password is stored in a salt file. This salt is a string of hexadecimal representation of a random integer of 64 bit. It is easy to access the salt by using Rooted Smartphone or JTAG Adapter.
+
+A special hardware known as JTAG (Joint Test Action Group) adapter can be used to access the salt. Similarly, a Riff-Box or a JIG-Adapter can also be used for the same functionality.
