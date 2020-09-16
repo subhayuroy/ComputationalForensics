@@ -9,7 +9,7 @@ def main(argv):
     if input('The file ' + sys.argv[1] + ' will be erased or overwrite if it exists .\nDo you wish to continue (Y/n): ') not in ('Y','y') :
         sys.exit('\nChanges were not recorded\n')
 
-    user_name = raw_input('Please Enter a User Name: ')
+    user_name = input('Please Enter a User Name: ')
     password = hashlib.sha224(getpass.getpass('Please Enter a Password:')).hexdigest()
 
     # Passwords which are hashed
