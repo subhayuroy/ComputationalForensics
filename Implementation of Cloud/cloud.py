@@ -5,13 +5,8 @@ import string
 import enchant  # Rainbow tables with enchant
 import cloud  # importing pi-cloud
 
-
 def randomword(length):
     return ''.join(random.choice(string.lowercase) for i in range(length))
-
-
-print('Author- Radhika Subramanian')
-
 
 def mainroutine():
     engdict = enchant.Dict("en_US")
@@ -52,7 +47,6 @@ def mainroutine():
             fileb.write(randomkey0 + " + " + str(whasher0.hexdigest()) + "\n")
             fileb.write(randomkey3 + " + " + str(whasher3.hexdigest()) + "\n")
             fileb.write(randomkey1 + " + " + str(whasher1.hexdigest()) + "\n")
-
 
 jid = cloud.call(randomword)  # square(3) evaluated on PiCloud
 cloud.result(jid)
